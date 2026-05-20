@@ -17,7 +17,7 @@ if _extra:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_origins,
-    allow_origin_regex=r"https://.*\.(vercel\.app|railway\.app)$",
+    allow_origin_regex=r"https://.*\.(vercel\.app|railway\.app|netlify\.app)$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
