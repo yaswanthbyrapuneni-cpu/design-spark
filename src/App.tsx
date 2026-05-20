@@ -967,10 +967,10 @@ function StartupDashboard() {
           </div>
           <div className="sd-hero-right">
             <span className="sd-radar-label">Readiness profile</span>
-            <ResponsiveContainer width="100%" height={190}>
-              <RadarChart data={report.scores.map(sc => ({ subject: sc.label, value: sc.value, fullMark: 100 }))}>
+            <ResponsiveContainer width="100%" height={200}>
+              <RadarChart data={report.scores.map(sc => ({ subject: sc.label, value: sc.value, fullMark: 100 }))} outerRadius="62%" margin={{ top: 10, right: 30, bottom: 10, left: 30 }}>
                 <PolarGrid stroke="var(--border-2)" />
-                <PolarAngleAxis dataKey="subject" tick={{ fontSize: 11, fill: 'var(--muted)', fontWeight: 600, fontFamily: 'Inter, sans-serif' }} />
+                <PolarAngleAxis dataKey="subject" tick={{ fontSize: 10, fill: 'var(--muted)', fontWeight: 600, fontFamily: 'Inter, sans-serif' }} />
                 <Radar dataKey="value" stroke={bc} fill={bc} fillOpacity={0.15} strokeWidth={2} dot={{ fill: bc, r: 3 }} />
                 <Tooltip formatter={(v) => [`${v}/100`, 'Score']} />
               </RadarChart>
